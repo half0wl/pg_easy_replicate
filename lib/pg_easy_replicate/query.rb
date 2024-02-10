@@ -15,7 +15,7 @@ module PgEasyReplicate
       )
         conn =
           connect(connection_url: connection_url, schema: schema, user: user)
-        timeout ||= "5s"
+        timeout ||= "15s"
         if transaction
           r =
             conn.transaction do
